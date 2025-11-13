@@ -1,12 +1,11 @@
 // @ts-nocheck
-import React, { useState, useEffect } from 'react';
 import {
-  SignupScreen,
-  LoginScreen,
   OnboardingScreen,
   SplashScreen,
-  WelcomeScreen,
+  WelcomeScreen
 } from '@/components/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, { useEffect, useState } from 'react';
 
 export default function HomeScreen() {
   const [currentScreen, setCurrentScreen] = useState('splash');
@@ -14,10 +13,17 @@ export default function HomeScreen() {
 
   // Kiểm tra xem đã từng xem Onboarding chưa
   useEffect(() => {
-    const seen = localStorage.getItem('hasSeenOnboarding');
-    if (seen === 'true') {
-      setHasSeenOnboarding(true);
-    }
+    const checkOnboarding = async () => {
+      try {
+        const seen = await AsyncStorage.getItem('hasSeenOnboarding');
+        if (seen === 'true') {
+          setHasSeenOnboarding(true);
+        }
+      } catch (e) {
+        console.error('Error reading onboarding status:', e);
+      }
+    };
+    checkOnboarding();
   }, []);
 
   // Splash timer
@@ -36,10 +42,14 @@ export default function HomeScreen() {
   }, [currentScreen, hasSeenOnboarding]);
 
   
-  const handleOnboardingComplete = () => {
-    localStorage.setItem('hasSeenOnboarding', 'true');
-    setHasSeenOnboarding(true);
-    setCurrentScreen('welcome');
+  const handleOnboardingComplete = async () => {
+    try {
+      await AsyncStorage.setItem('hasSeenOnboarding', 'true');
+      setHasSeenOnboarding(true);
+      setCurrentScreen('welcome');
+    } catch (e) {
+      console.error('Error saving onboarding status:', e);
+    }
   };
 
   if (currentScreen === 'splash') {

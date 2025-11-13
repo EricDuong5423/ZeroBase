@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
   Pressable,
+  StyleSheet,
+  Text,
   TextInput,
+  View,
 } from 'react-native';
 
 export default function SignupScreen({ onNavigateToLogin }) {
@@ -168,10 +168,7 @@ const styles = StyleSheet.create({
     padding: 40,
     width: '100%',
     maxWidth: 400,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
+    boxShadow: '0px 4px 8px rgba(0,0,0,0.1)',
     elevation: 5,
   },
   signupTitle: {
