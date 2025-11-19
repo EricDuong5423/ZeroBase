@@ -23,20 +23,18 @@ const onboardingData = [
   {
     id: 2,
     title: "Track your spending",
-    description:
-      "Set budgets and see where your cash goes in real time.",
+    description: "Set budgets and see where your cash goes in real time.",
   },
   {
     id: 3,
     title: "Reach your goals",
-    description:
-      "Save smarter with reminders and simple plans.",
+    description: "Save smarter with reminders and simple plans.",
   },
 ];
 
 export default function OnboardingScreen({ onComplete }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [pageWidth, setPageWidth] = useState(SCREEN_WIDTH); 
+  const [pageWidth, setPageWidth] = useState(SCREEN_WIDTH);
   const scrollViewRef = useRef(null);
 
   const handleScroll = (event) => {
@@ -105,13 +103,24 @@ export default function OnboardingScreen({ onComplete }) {
               >
                 <View style={styles.slideContent}>
                   <Text style={styles.slideTitle}>{item.title}</Text>
-                  <Text style={styles.slideDescription}>{item.description}</Text>
+                  <Text style={styles.slideDescription}>
+                    {item.description}
+                  </Text>
 
                   <AppButton
                     text={item.id === 3 ? "Login Now" : "Next"}
                     color="#000"
-                    style={{ backgroundColor: "#000", paddingHorizontal: 28, paddingVertical: 14, borderRadius: 28 }}
-                    textStyle={{ color: "#fff", fontSize: 16, fontWeight: "600" }}
+                    style={{
+                      backgroundColor: "#000",
+                      paddingHorizontal: 28,
+                      paddingVertical: 14,
+                      borderRadius: 28,
+                    }}
+                    textStyle={{
+                      color: "#fff",
+                      fontSize: 16,
+                      fontWeight: "600",
+                    }}
                     onPress={goToNextSlide}
                   />
                 </View>
@@ -127,11 +136,11 @@ export default function OnboardingScreen({ onComplete }) {
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: "#000", 
+    backgroundColor: "#000",
   },
   contentArea: {
     flex: 1,
-    backgroundColor: "#fff", 
+    backgroundColor: "#fff",
   },
   content: {
     flex: 1,

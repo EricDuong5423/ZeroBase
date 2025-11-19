@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingScreen matches snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#000",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "position": "absolute",
+          "right": 12,
+          "top": 12,
+          "zIndex": 1,
+        }
+      }
+    >
+      <View
+        testID="menu-icon"
+      />
+    </View>
+    <View
+      style={
+        {
+          "flex": 1,
+          "paddingBottom": 24,
+          "paddingTop": 16,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "paddingBottom": 12,
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "#ccc",
+                "borderRadius": 4,
+                "height": 8,
+                "marginHorizontal": 4,
+                "width": 8,
+              },
+              {
+                "backgroundColor": "#000",
+                "width": 24,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "#ccc",
+                "borderRadius": 4,
+                "height": 8,
+                "marginHorizontal": 4,
+                "width": 8,
+              },
+              false,
+            ]
+          }
+        />
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "#ccc",
+                "borderRadius": 4,
+                "height": 8,
+                "marginHorizontal": 4,
+                "width": 8,
+              },
+              false,
+            ]
+          }
+        />
+      </View>
+      <RCTScrollView
+        horizontal={true}
+        onScroll={[Function]}
+        pagingEnabled={true}
+        scrollEventThrottle={16}
+        showsHorizontalScrollIndicator={false}
+        style={
+          {
+            "flex": 1,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 24,
+                },
+                {
+                  "width": 750,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#000",
+                    "fontSize": 28,
+                    "fontWeight": "bold",
+                    "marginBottom": 12,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Manage your money
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                    "marginBottom": 24,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                I wanna help u guys manage your money better, maybe, but it still depends.
+              </Text>
+              <Text
+                onPress={[Function]}
+                testID="app-button-Next"
+              >
+                Next
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 24,
+                },
+                {
+                  "width": 750,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#000",
+                    "fontSize": 28,
+                    "fontWeight": "bold",
+                    "marginBottom": 12,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Track your spending
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                    "marginBottom": 24,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Set budgets and see where your cash goes in real time.
+              </Text>
+              <Text
+                onPress={[Function]}
+                testID="app-button-Next"
+              >
+                Next
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 24,
+                },
+                {
+                  "width": 750,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#000",
+                    "fontSize": 28,
+                    "fontWeight": "bold",
+                    "marginBottom": 12,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Reach your goals
+              </Text>
+              <Text
+                style={
+                  {
+                    "color": "#333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                    "marginBottom": 24,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Save smarter with reminders and simple plans.
+              </Text>
+              <Text
+                onPress={[Function]}
+                testID="app-button-Login Now"
+              >
+                Login Now
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
